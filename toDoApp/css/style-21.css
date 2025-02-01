@@ -1,0 +1,45 @@
+body{
+    background-color: #2c2f34;
+}
+.active{
+    padding: 10px;
+    background-color: #2c2f34;
+    color: white;
+}
+.app-data{
+    background-color: white;
+    width: 500px;
+    border-radius: 20px;
+}
+.filter-buttons button{
+    border: none;
+    background-color: #dfe2e2;
+}
+.done-btn{
+    background-color: #cb9b42;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.delete-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.Add_btn{
+    background-color: #cb9b42;
+    color: white;
+}
+.task-input{
+    border-radius: 20px;
+    padding: 10px;
+    border: solid #2c2f34 1px;
+}
+p{
+    margin-bottom: 0;
+}
+.data-container{
+    padding-bottom: 10px;
+    border-bottom: solid #2c2f3435 1px;
+}

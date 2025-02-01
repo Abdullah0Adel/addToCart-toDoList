@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style-21.css">
+</head>
+<body>
+    
+<div class="container mt-5">
+    <div class=" app-data p-5 m-auto d-flex flex-column justify-content-between gap-5 align-items-center">
+        <div class="insertData d-flex justify-content-between w-100 gap-4">
+            <input type="text" class="task-input w-100">
+            <button class="Add_btn btn" onclick="addTask()">Add</button>
+        </div>
+        <div class="filter-buttons d-flex justify-content-between gap-5">
+            <button class="btn" id="all-btn" onclick="filterTasks('all', this)">All</button>
+            <button class="btn" id="active-btn" onclick="filterTasks('active', this)">Active</button>
+            <button class="btn" id="completed-btn" onclick="filterTasks('completed', this)">Completed</button>
+        </div>
+        
+        <div class="Data d-flex flex-column w-100 gap-4">
+            <!-- <p>task 1</p>
+            <div class="task-btn">
+                <button class="done-btn">Done</button>
+                <button class="delete-btn">Delete</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="./js/script-21.js"></script>
+</body>
+</html>
