@@ -19,11 +19,10 @@
             <button class="Add_btn btn" onclick="addTask()">Add</button>
         </div>
         <div class="filter-buttons d-flex justify-content-between gap-5">
-            <button class="btn" id="all-btn" onclick="filterTasks('all', this)">All</button>
-            <button class="btn" id="active-btn" onclick="filterTasks('active', this)">Active</button>
-            <button class="btn" id="completed-btn" onclick="filterTasks('completed', this)">Completed</button>
-        </div>
-        
+            <button id="all-btn" onclick="filterTasks('all', this)">All</button>
+            <button onclick="filterTasks('active', this)">Active</button>
+            <button onclick="filterTasks('completed', this)">Completed</button>
+        </div>        <!--  -->
         <div class="Data d-flex flex-column w-100 gap-4">
             <!-- <p>task 1</p>
             <div class="task-btn">

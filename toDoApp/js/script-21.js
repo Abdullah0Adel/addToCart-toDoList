@@ -1,22 +1,20 @@
-const tasks =  JSON.parse(localStorage.getItem('tasks')) || [];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 const input = document.querySelector(".task-input");
 const Data = document.querySelector(".Data");
-let filter = "all"; // ✅ Default to show all tasks
-
+let filter = "all"; // Default to show all tasks
 
 // Add Task
-function addTask(){
+function addTask() {
     const taskInput = input.value.trim();
-    const newobj = {name: taskInput, statu: "Active"}
+    const newObj = { id: Date.now(), name: taskInput, status: "Active" }; // Add a unique ID
 
-    if(taskInput){
-        tasks.push(newobj)
+    if (taskInput) {
+        tasks.push(newObj);
         input.value = '';
         localStorage.setItem('tasks', JSON.stringify(tasks));
-        displayTask();    
-    }
-    else{
-        alert("please write somthing");
+        displayTask();
+    } else {
+        alert("Please write something");
     }
 }
 
@@ -42,8 +40,6 @@ function displayTask() {
     Data.innerHTML = tasksHTML;
 }
 
-
-
 // Remove Task
 function removeTask(taskId) {
     const taskIndex = tasks.findIndex(task => task.id === taskId);
@@ -61,10 +57,10 @@ function markAsDone(taskId) {
         task.status = task.status === "Active" ? "Done" : "Active";
         localStorage.setItem('tasks', JSON.stringify(tasks));
 
+        // Re-render the list while preserving the current filter
         displayTask();
     }
 }
-
 
 function filterTasks(newFilter, clickedButton) {
     filter = newFilter;
